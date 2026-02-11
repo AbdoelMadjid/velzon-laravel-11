@@ -1743,25 +1743,32 @@ File: Main Js File
 
 	function persistThemeSettings() {
 		if (!window.themeSettingsConfig || !window.themeSettingsConfig.updateUrl) {
-			return;
+			return Promise.resolve();
 		}
 
 		clearTimeout(themeSettingsSaveTimeout);
-		themeSettingsSaveTimeout = setTimeout(function () {
-			var tokenMeta = document.querySelector('meta[name="csrf-token"]');
-			var token = tokenMeta ? tokenMeta.getAttribute("content") : "";
 
-			fetch(window.themeSettingsConfig.updateUrl, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					"X-CSRF-TOKEN": token,
-					"Accept": "application/json"
-				},
-				credentials: "same-origin",
-				body: JSON.stringify(getCurrentThemeAttributes())
-			}).catch(function () { });
-		}, 350);
+		return new Promise(function (resolve) {
+			themeSettingsSaveTimeout = setTimeout(function () {
+				var tokenMeta = document.querySelector('meta[name="csrf-token"]');
+				var token = tokenMeta ? tokenMeta.getAttribute("content") : "";
+
+				fetch(window.themeSettingsConfig.updateUrl, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"X-CSRF-TOKEN": token,
+						"Accept": "application/json"
+					},
+					credentials: "same-origin",
+					body: JSON.stringify(getCurrentThemeAttributes())
+				}).then(function () {
+					resolve();
+				}).catch(function () {
+					resolve();
+				});
+			}, 350);
+		});
 	}
 
 	function getElementUsingTagname(ele, val) {
