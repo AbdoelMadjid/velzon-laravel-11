@@ -12,6 +12,12 @@
     </div>
 </div>
 
+<script>
+    window.themeSettingsConfig = {
+        updateUrl: "{{ route('theme-settings.update') }}"
+    };
+</script>
+
 
 <!--end back-to-top-->
 <div class="customizer-setting d-none d-md-block">

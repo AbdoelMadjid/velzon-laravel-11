@@ -1646,7 +1646,7 @@ File: Main Js File
 				switch (isLayoutAttributes["data-body-image"]) {
 					case "img-1":
 						getElementUsingTagname("data-body-image", "img-1");
-						sessionStorage.setItem("data-sidebabodyr-image", "img-1");
+						sessionStorage.setItem("data-body-image", "img-1");
 						document.documentElement.setAttribute("data-body-image", "img-1");
 						if (document.getElementById("theme-settings-offcanvas")) {
 							document.documentElement.removeAttribute("data-sidebar-image");
@@ -1722,6 +1722,48 @@ File: Main Js File
 
 	// add change event listener on right layout setting
 	var resizeEvent = new Event('resize');
+	var themeSettingsSaveTimeout;
+
+	function getCurrentThemeAttributes() {
+		return {
+			"data-layout": document.documentElement.getAttribute("data-layout"),
+			"data-layout-style": document.documentElement.getAttribute("data-layout-style"),
+			"data-layout-position": document.documentElement.getAttribute("data-layout-position"),
+			"data-layout-width": document.documentElement.getAttribute("data-layout-width"),
+			"data-topbar": document.documentElement.getAttribute("data-topbar"),
+			"data-sidebar": document.documentElement.getAttribute("data-sidebar"),
+			"data-sidebar-size": document.documentElement.getAttribute("data-sidebar-size"),
+			"data-sidebar-image": document.documentElement.getAttribute("data-sidebar-image"),
+			"data-sidebar-visibility": document.documentElement.getAttribute("data-sidebar-visibility"),
+			"data-bs-theme": document.documentElement.getAttribute("data-bs-theme"),
+			"data-preloader": document.documentElement.getAttribute("data-preloader"),
+			"data-body-image": document.documentElement.getAttribute("data-body-image")
+		};
+	}
+
+	function persistThemeSettings() {
+		if (!window.themeSettingsConfig || !window.themeSettingsConfig.updateUrl) {
+			return;
+		}
+
+		clearTimeout(themeSettingsSaveTimeout);
+		themeSettingsSaveTimeout = setTimeout(function () {
+			var tokenMeta = document.querySelector('meta[name="csrf-token"]');
+			var token = tokenMeta ? tokenMeta.getAttribute("content") : "";
+
+			fetch(window.themeSettingsConfig.updateUrl, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-CSRF-TOKEN": token,
+					"Accept": "application/json"
+				},
+				credentials: "same-origin",
+				body: JSON.stringify(getCurrentThemeAttributes())
+			}).catch(function () { });
+		}, 350);
+	}
+
 	function getElementUsingTagname(ele, val) {
 		Array.from(document.querySelectorAll("input[name=" + ele + "]")).forEach(function (x) {
 			val == x.value ? (x.checked = true) : (x.checked = false);
@@ -1809,6 +1851,8 @@ File: Main Js File
 					// Dispatch the resize event on the window object
 					window.dispatchEvent(resizeEvent);
 				}
+
+				persistThemeSettings();
 			});
 		});
 
@@ -1964,8 +2008,28 @@ File: Main Js File
 	function resetLayout() {
 		if (document.getElementById("reset-layout")) {
 			document.getElementById("reset-layout").addEventListener("click", function () {
-				sessionStorage.clear();
-				window.location.reload();
+				if (!window.themeSettingsConfig || !window.themeSettingsConfig.updateUrl) {
+					sessionStorage.clear();
+					window.location.reload();
+					return;
+				}
+
+				var tokenMeta = document.querySelector('meta[name="csrf-token"]');
+				var token = tokenMeta ? tokenMeta.getAttribute("content") : "";
+
+				fetch(window.themeSettingsConfig.updateUrl, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"X-CSRF-TOKEN": token,
+						"Accept": "application/json"
+					},
+					credentials: "same-origin",
+					body: JSON.stringify({})
+				}).finally(function () {
+					sessionStorage.clear();
+					window.location.reload();
+				});
 			});
 		}
 	}

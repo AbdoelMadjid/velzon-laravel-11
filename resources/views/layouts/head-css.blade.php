@@ -1,4 +1,5 @@
 @yield('css')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- Layout config Js -->
 <script src="{{ URL::asset('build/js/layout.js') }}"></script>
 <!-- Bootstrap Css -->

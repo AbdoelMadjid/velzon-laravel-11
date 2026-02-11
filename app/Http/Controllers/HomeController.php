@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ThemeSetting;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -42,14 +43,32 @@ class HomeController extends Controller
     /*Language Translation*/
     public function lang($locale)
     {
-        if ($locale) {
-            App::setLocale($locale);
-            Session::put('lang', $locale);
-            Session::save();
-            return redirect()->back()->with('locale', $locale);
-        } else {
+        if (! $locale) {
             return redirect()->back();
         }
+
+        $allowedLocales = ['en', 'sp', 'gr', 'it', 'ru', 'ch', 'fr', 'id', 'ae'];
+
+        if (! in_array($locale, $allowedLocales, true)) {
+            return redirect()->back();
+        }
+
+        App::setLocale($locale);
+        Session::put('lang', $locale);
+        Session::save();
+
+        try {
+            $setting = ThemeSetting::query()->firstOrCreate(
+                ['id' => 1],
+                ThemeSetting::toDbColumns(ThemeSetting::defaults())
+            );
+            $setting->locale = $locale;
+            $setting->save();
+        } catch (\Throwable $th) {
+            // Keep language switch working even if theme settings table is not ready.
+        }
+
+        return redirect()->back()->with('locale', $locale);
     }
 
     public function updateProfile(Request $request, $id)

@@ -12,7 +12,7 @@ if (document.getElementById("sa-basic"))
         Swal.fire({
             title: 'Any fool can use a computer',
             confirmButtonClass: 'btn btn-primary w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -25,7 +25,7 @@ if (document.getElementById("sa-title"))
             text: 'That thing is still around?',
             icon: 'question',
             confirmButtonClass: 'btn btn-primary w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -40,7 +40,7 @@ if (document.getElementById("sa-success"))
             showCancelButton: true,
             confirmButtonClass: 'btn btn-primary w-xs me-2 mt-2',
             cancelButtonClass: 'btn btn-danger w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -53,7 +53,7 @@ if (document.getElementById("sa-error"))
             text: 'Something went wrong!',
             icon: 'error',
             confirmButtonClass: 'btn btn-primary w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             footer: '<a href="">Why do I have this issue?</a>',
             showCloseButton: true
         })
@@ -67,7 +67,7 @@ if (document.getElementById("sa-longcontent"))
             imageHeight: 1500,
             imageAlt: 'A tall image',
             confirmButtonClass: 'btn btn-primary w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -83,7 +83,7 @@ if (document.getElementById("sa-warning"))
             confirmButtonClass: 'btn btn-primary w-xs me-2 mt-2',
             cancelButtonClass: 'btn btn-danger w-xs mt-2',
             confirmButtonText: "Yes, delete it!",
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         }).then(function (result) {
             if (result.value) {
@@ -92,7 +92,7 @@ if (document.getElementById("sa-warning"))
                     text: 'Your file has been deleted.',
                     icon: 'success',
                     confirmButtonClass: 'btn btn-primary w-xs mt-2',
-                    buttonsStyling: true
+                    buttonsStyling: false
                 })
             }
         });
@@ -110,7 +110,7 @@ if (document.getElementById("sa-params"))
             cancelButtonText: 'No, cancel!',
             confirmButtonClass: 'btn btn-primary w-xs me-2 mt-2',
             cancelButtonClass: 'btn btn-danger w-xs mt-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         }).then(function (result) {
             if (result.value) {
@@ -119,7 +119,7 @@ if (document.getElementById("sa-params"))
                     text: 'Your file has been deleted.',
                     icon: 'success',
                     confirmButtonClass: 'btn btn-primary w-xs mt-2',
-                    buttonsStyling: true
+                    buttonsStyling: false
                 })
             } else if (
                 // Read more about handling dismissals
@@ -130,7 +130,7 @@ if (document.getElementById("sa-params"))
                     text: 'Your imaginary file is safe :)',
                     icon: 'error',
                     confirmButtonClass: 'btn btn-primary mt-2',
-                    buttonsStyling: true
+                    buttonsStyling: false
                 })
             }
         });
@@ -146,8 +146,8 @@ if (document.getElementById("sa-image"))
             imageUrl: 'build/images/logo-sm.png',
             imageHeight: 40,
             confirmButtonClass: 'btn btn-primary w-xs mt-2',
-            buttonsStyling: true,
-            animation: true,
+            buttonsStyling: false,
+            animation: false,
             showCloseButton: true
         })
     });
@@ -198,7 +198,7 @@ if (document.getElementById("custom-html-alert"))
             showCancelButton: true,
             confirmButtonClass: 'btn btn-success me-2',
             cancelButtonClass: 'btn btn-danger',
-            buttonsStyling: true,
+            buttonsStyling: false,
             confirmButtonText: '<i class="ri-thumb-up-fill align-bottom me-1"></i> Great!',
             cancelButtonText: '<i class="ri-thumb-down-fill align-bottom"></i>',
             showCloseButton: true
@@ -216,7 +216,7 @@ if (document.getElementById("sa-dialog-three-btn"))
             confirmButtonClass: 'btn btn-success w-xs me-2',
             cancelButtonClass: 'btn btn-danger w-xs',
             denyButtonClass: 'btn btn-info w-xs me-2',
-            buttonsStyling: true,
+            buttonsStyling: false,
             denyButtonText: 'Don\'t save',
             showCloseButton: true
         }).then(function (result) {
@@ -226,14 +226,14 @@ if (document.getElementById("sa-dialog-three-btn"))
                     title: 'Saved!',
                     icon: 'success',
                     confirmButtonClass: 'btn btn-primary w-xs',
-                    buttonsStyling: true,
+                    buttonsStyling: false,
                 })
             } else if (result.isDenied) {
                 Swal.fire({
                     title: 'Changes are not saved',
                     icon: 'info',
                     confirmButtonClass: 'btn btn-primary w-xs',
-                    buttonsStyling: true,
+                    buttonsStyling: false,
                 })
             }
         })
@@ -246,7 +246,7 @@ if (document.getElementById("sa-position"))
             position: 'top-end',
             icon: 'success',
             title: 'Your work has been saved',
-            showConfirmButton: true,
+            showConfirmButton: false,
             timer: 1500,
             showCloseButton: true
         })
@@ -260,7 +260,7 @@ if (document.getElementById("custom-padding-width-alert"))
             width: 600,
             padding: 100,
             confirmButtonClass: 'btn btn-primary w-xs',
-            buttonsStyling: true,
+            buttonsStyling: false,
             background: '#fff url(build/images/chat-bg-pattern.png)'
         })
     });
@@ -276,7 +276,7 @@ if (document.getElementById("ajax-alert"))
             showLoaderOnConfirm: true,
             confirmButtonClass: 'btn btn-primary w-xs me-2',
             cancelButtonClass: 'btn btn-danger w-xs',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true,
             preConfirm: function (email) {
                 return new Promise(function (resolve, reject) {
@@ -289,13 +289,13 @@ if (document.getElementById("ajax-alert"))
                     }, 2000)
                 })
             },
-            allowOutsideClick: true
+            allowOutsideClick: false
         }).then(function (email) {
             Swal.fire({
                 icon: 'success',
                 title: 'Ajax request finished!',
                 confirmButtonClass: 'btn btn-primary w-xs',
-                buttonsStyling: true,
+                buttonsStyling: false,
                 html: 'Submitted email: ' + email
             })
         })
@@ -316,10 +316,10 @@ if (document.getElementById("custom-sa-success"))
                 '</div>' +
                 '</div>',
             showCancelButton: true,
-            showConfirmButton: true,
+            showConfirmButton: false,
             cancelButtonClass: 'btn btn-primary w-xs mb-1',
             cancelButtonText: 'Back',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -336,10 +336,10 @@ if (document.getElementById("custom-sa-error"))
                 '</div>' +
                 '</div>',
             showCancelButton: true,
-            showConfirmButton: true,
+            showConfirmButton: false,
             cancelButtonClass: 'btn btn-primary w-xs mb-1',
             cancelButtonText: 'Dismiss',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -359,7 +359,7 @@ if (document.getElementById("custom-sa-warning"))
             confirmButtonClass: 'btn btn-primary w-xs me-2 mb-1',
             confirmButtonText: 'Yes, Delete It!',
             cancelButtonClass: 'btn btn-danger w-xs mb-1',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -381,7 +381,7 @@ if (document.getElementById("custom-sa-community"))
             imageHeight: 40,
             confirmButtonClass: 'btn btn-primary w-xs mb-2',
             confirmButtonText: 'Register <i class="ri-arrow-right-line ms-1 align-bottom"></i>',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });
@@ -401,10 +401,10 @@ if (document.getElementById("custom-sa-email-verify"))
                 '<p class="text-muted mb-0 mt-3 fs-13">We have sent you verification email <span class="fw-medium text-dark">example@abc.com</span>, <br/> Please check it.</p>' +
                 '</div>' +
                 '</div>',
-            showCancelButton: true,
+            showCancelButton: false,
             confirmButtonClass: 'btn btn-primary mb-1',
             confirmButtonText: 'Verify Email',
-            buttonsStyling: true,
+            buttonsStyling: false,
             footer: '<p class="fs-14 text-muted mb-0">Didn\'t receive an email ? <a href="#" class="fw-semibold text-decoration-underline">Resend</a></p>',
             showCloseButton: true
         })
@@ -424,10 +424,10 @@ if (document.getElementById("custom-sa-notification"))
                 '<p class="text-muted mb-0 fs-13">You have <span class="fw-semibold text-success">2</span> Notifications</p>' +
                 '</div>' +
                 '</div>',
-            showCancelButton: true,
+            showCancelButton: false,
             confirmButtonClass: 'btn btn-primary mb-1',
             confirmButtonText: 'Show Me <i class="ri-arrow-right-line ms-1 align-bottom"></i>',
-            buttonsStyling: true,
+            buttonsStyling: false,
             showCloseButton: true
         })
     });

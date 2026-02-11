@@ -154,6 +154,9 @@
                         @case('fr')
                         <img src="{{ URL::asset('build/images/flags/french.svg') }}" class="rounded" alt="Header Language" height="20">
                         @break
+                        @case('id')
+                        <img src="{{ URL::asset('build/images/flags/id.svg') }}" class="rounded" alt="Header Language" height="20">
+                        @break
                         @case('gr')
                         <img src="{{ URL::asset('build/images/flags/germany.svg') }}" class="rounded" alt="Header Language" height="20">
                         @break
@@ -205,6 +208,11 @@
                         <a href="{{ url('index/fr') }}" class="dropdown-item notify-item language" data-lang="fr" title="French">
                             <img src="{{ URL::asset('build/images/flags/french.svg') }}" alt="user-image" class="me-2 rounded" height="20">
                             <span class="align-middle">français</span>
+                        </a>
+                        <!-- item-->
+                        <a href="{{ url('index/id') }}" class="dropdown-item notify-item language" data-lang="id" title="Indonesian">
+                            <img src="{{ URL::asset('build/images/flags/id.svg') }}" alt="user-image" class="me-2 rounded" height="20">
+                            <span class="align-middle">Bahasa Indonesia</span>
                         </a>
                         <!-- item-->
                         <a href="{{ url('index/ae') }}" class="dropdown-item notify-item language" data-lang="ae" title="Arabic">
@@ -756,3 +764,4 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+

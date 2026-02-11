@@ -22,5 +22,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('roo
 //Update User Details
 Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
+Route::post('/theme-settings', [App\Http\Controllers\ThemeSettingController::class, 'update'])->name('theme-settings.update');
 
 Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
