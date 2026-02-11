@@ -1560,7 +1560,7 @@ File: Main Js File
 						} else if (sessionStorage.getItem("data-sidebar-image") == "img-1") {
 							sessionStorage.setItem("data-sidebar-image", "img-1");
 							getElementUsingTagname("data-sidebar-image", "img-1");
-							document.documentElement.setAttribute("data-sidebar-image", "img-2");
+							document.documentElement.setAttribute("data-sidebar-image", "img-1");
 						} else if (sessionStorage.getItem("data-sidebar-image") == "img-2") {
 							sessionStorage.setItem("data-sidebar-image", "img-2");
 							getElementUsingTagname("data-sidebar-image", "img-2");

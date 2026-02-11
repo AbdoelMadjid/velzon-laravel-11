@@ -7,7 +7,7 @@
     data-topbar="light"
     data-sidebar="dark"
     data-sidebar-size="lg"
-    data-sidebar-image="none"
+    data-sidebar-image="{{ $themeSettings['data-sidebar-image'] ?? 'none' }}"
     data-sidebar-visibility="show"
     data-bs-theme="light"
     data-preloader="disable"
