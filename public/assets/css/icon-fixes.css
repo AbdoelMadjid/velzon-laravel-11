@@ -1,0 +1,27 @@
+/* Collapse arrow fallback (no icon-font dependency) */
+.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse]::after {
+  display: block;
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  margin-left: auto;
+  transition: transform .2s;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  margin-top: -0.25rem;
+  color: var(--vz-vertical-menu-title-color);
+  transform: rotate(45deg);
+}
+
+.navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse][aria-expanded=true]::after {
+  transform: rotate(135deg);
+  color: var(--vz-vertical-menu-item-active-color);
+}
+
+/* Breadcrumb separator */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: var(--vz-breadcrumb-divider, var(--bs-breadcrumb-divider, "/")) !important;
+}
