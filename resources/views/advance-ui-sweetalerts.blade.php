@@ -4,6 +4,48 @@
 @endsection
 @section('css')
     <link href="{{ URL::asset('build/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <style>
+        .swal2-actions .swal2-confirm,
+        .swal2-actions .swal2-cancel,
+        .swal2-actions .swal2-deny {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            border-radius: var(--vz-border-radius);
+            padding: .47rem .75rem;
+            border: 1px solid transparent;
+        }
+
+        .swal2-actions .swal2-confirm {
+            color: #fff;
+            background-color: var(--vz-primary);
+            border-color: var(--vz-primary);
+        }
+
+        .swal2-actions .swal2-cancel {
+            color: #fff;
+            background-color: var(--vz-danger);
+            border-color: var(--vz-danger);
+        }
+
+        .swal2-actions .swal2-deny {
+            color: #fff;
+            background-color: var(--vz-info);
+            border-color: var(--vz-info);
+        }
+
+        .swal2-actions .swal2-confirm:hover {
+            opacity: .9;
+        }
+
+        .swal2-actions .swal2-cancel:hover {
+            opacity: .9;
+        }
+
+        .swal2-actions .swal2-deny:hover {
+            opacity: .9;
+        }
+    </style>
 @endsection
 @section('content')
     @component('components.breadcrumb')
