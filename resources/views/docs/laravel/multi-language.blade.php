@@ -1,462 +1,9 @@
-<!doctype html>
-<html lang="en" data-layout="vertical" data-layout-style="" data-layout-position="" data-topbar="light"
-    data-sidebar="dark" data-sidebar-size="lg" data-layout-width="">
+@extends('docs.laravel.layout')
 
+@section('title', 'Multi Language | Velzon Laravel - Admin & Dashboard Template Documentation')
 
-<!-- Mirrored from themesbrand.com/velzon/docs/laravel/multi-language.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Feb 2026 17:21:16 GMT -->
-
-<head>
-
-    <meta charset="utf-8" />
-    <title>Multi Language | Velzon Laravel - Admin & Dashboard Template Documentation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Velzon Laravel 9 Premium Multipurpose Admin & Dashboard Template Documentation" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="https://themesbrand.com/velzon/docs/assets/images/favicon.ico">
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Remix Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icon-fixes.css" rel="stylesheet" type="text/css" />
-
-</head>
-
-<body>
-
-    <!-- Begin page -->
-    <div id="layout-wrapper">
-
-        <header id="page-topbar">
-            <div class="layout-width">
-                <div class="navbar-header">
-                    <div class="d-flex">
-                        <!-- LOGO -->
-                        <div class="navbar-brand-box horizontal-logo">
-                            <a href="index.html" class="logo logo-dark">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="17">
-                                </span>
-                            </a>
-
-                            <a href="index.html" class="logo logo-light">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="17">
-                                </span>
-                            </a>
-                        </div>
-
-                        <button type="button"
-                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
-                            id="topnav-hamburger-icon">
-                            <span class="hamburger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-
-                        <div class="header-item ms-2">
-                            <div class="avatar-sm me-1 me-md-2 flex-shrink-0">
-                                <div class="avatar-title bg-white rounded-circle border">
-                                    <img src="assets/images/brand-logos/laravel.png" alt="" height="23">
-                                </div>
-                            </div>
-                            <span class="h5 mb-0">Laravel Docs</span>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center">
-
-                        <div class="header-item me-1 me-md-3">
-                            <a href="https://1.envato.market/velzon-support" target="_blank" class="btn btn-success"><i
-                                    class="ri-lifebuoy-line me-1 align-middle"></i> Support</a>
-                        </div>
-
-                        <div class="header-item">
-                            <a href="https://1.envato.market/velzon-admin" target="_blank" class="btn btn-primary"><i
-                                    class="ri-shopping-basket-2-line me-1 align-middle"></i> Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ========== App Menu ========== -->
-        <div class="app-menu navbar-menu">
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-                <!-- Dark Logo-->
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="" height="17">
-                    </span>
-                </a>
-                <!-- Light Logo-->
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-light.png" alt="" height="17"> <span
-                            class="badge badge-soft-danger fs-14 ms-1">LARAVEL</span>
-                    </span>
-                </a>
-                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
-                    id="vertical-hover">
-                    <i class="ri-record-circle-line"></i>
-                </button>
-            </div>
-
-            <div id="scrollbar">
-                <div class="container-fluid">
-
-                    <ul class="navbar-nav" id="navbar-nav">
-                        <li class="menu-title"><span>Menu</span></li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="index.html">
-                                <i class="ri-honour-line"></i> <span>Introduction</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="folder-structure.html">
-                                <i class="ri-folder-2-line"></i> <span>Folder Structure</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="getting-started.html">
-                                <i class="ri-settings-6-line"></i> <span>Getting Started</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#customization" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="customization">
-                                <i class="ri-equalizer-line"></i> <span>Customization</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="customization">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="css.html" class="nav-link">CSS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="scss.html" class="nav-link">SASS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="javascript.html" class="nav-link">Javascript</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- end Dashboard Menu -->
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="layout-setup.html">
-                                <i class="ri-code-line"></i> <span>Layout Setup</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-structure.html">
-                                <i class=" ri-contrast-2-fill"></i> <span>Create New Page</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-passport.html">
-                                <i class="ri-plug-line"></i> <span>Laravel Passport</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-acl.html">
-                                <i class="ri-code-box-line"></i> <span>Laravel ACL</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="starter-kit.html">
-                                <i class="ri-rocket-line"></i> <span>Starter Kit vs Full Admin</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="theme-setup.html">
-                                <i class="ri-paint-line"></i> <span>Theme Setup</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarLayouts">
-                                <i class="ri-layout-3-line"></i> <span>Layouts</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarLayouts">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="vertical.html" class="nav-link">Vertical</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="horizontal.html" class="nav-link">Horizontal</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="detached.html" class="nav-link">Detached</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="two-column.html" class="nav-link">Two Column</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="hovered.html" class="nav-link">Hovered</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="semibox.html" class="nav-link">Semibox</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="multi-language.html">
-                                <i class="ri-global-line"></i> <span>Multi Language</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="dark-mode.html">
-                                <i class="ri-contrast-2-line"></i> <span>Dark Mode</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="rtl.html">
-                                <i class="ri-layout-right-2-line"></i> <span>RTL Version</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="sources.html">
-                                <i class="ri-pantone-line"></i> <span>Sources & Credits</span>
-                            </a>
-                        </li>
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="upgrade.html">
-                            <i class="ri-server-line"></i> <span>Upgrade</span>
-                        </a>
-                    </li> -->
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="changelog.html">
-                            <i class="ri-draft-line"></i> <span>Change Log</span>
-                        </a>
-                    </li> -->
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="github.html">
-                            <i class="ri-github-line"></i> <span>Github Access</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="">
-                            <i class="ri-discuss-line"></i> <span>Suggestions</span>
-                        </a>
-                    </li>-->
-
-                        <li class="menu-title"><i class="ri-more-fill"></i> <span>Components</span></li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="bootstrap-ui.html">
-                                <i class="ri-pencil-ruler-2-line"></i> <span>Bootstrap UI</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="icons.html">
-                                <i class="ri-compasses-2-line"></i> <span>Icons</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarAdvanceUI" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarAdvanceUI">
-                                <i class="ri-stack-line"></i> <span>Advance UI</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarAdvanceUI">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="sweetalert2.html" class="nav-link">Sweetalert2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="sortablejs.html" class="nav-link">Sortablejs</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="simplebar.html" class="nav-link">Simplebar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="animation.html" class="nav-link">Aos Animation</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="shepherdjs-tour.html" class="nav-link">Shepherd Js - Tour</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="swiper-slider.html" class="nav-link">Swiper Slider</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="ratings.html" class="nav-link">Raterjs - Ratings</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="prismjs-highlight.html" class="nav-link">Prismjs - Highlight</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="glightbox.html" class="nav-link">Glightbox</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarForms" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarForms">
-                                <i class="ri-file-list-3-line"></i> <span>Forms</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarForms">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="choices.html" class="nav-link">Choices</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="flatpickr.html" class="nav-link"> Flatpickr </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="colorpicker.html" class="nav-link">Pickr - Colorpicker</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="input-mask.html" class="nav-link"> Cleavejs - Input Mask</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="multi-js.html" class="nav-link">Multi Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="autocomplete.html" class="nav-link">Autocomplete</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="input-spin.html" class="nav-link"> Input Spin </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="nouislider.html" class="nav-link">Nouislider - Range</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="wizard.html" class="nav-link">Wizard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="ckeditor.html" class="nav-link">Ckeditor</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="quilljs.html" class="nav-link">Quilljs Editor</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="dropzone.html" class="nav-link">Dropzone - File Uploads</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="filepond.html" class="nav-link">Filepond - File Uploads</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="select2.html" class="nav-link">Select 2</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarTables" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarTables">
-                                <i class="ri-layout-grid-line"></i> <span>Tables</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarTables">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="gridjs.html" class="nav-link">Grid Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="listjs.html" class="nav-link">List Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="datatables.html" class="nav-link">Data Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarCharts">
-                                <i class="ri-pie-chart-line"></i> <span>Charts</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarCharts">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="apexcharts.html" class="nav-link"> Apexcharts </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="chartjs.html" class="nav-link"> Chartjs </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="echarts.html" class="nav-link"> Echarts </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarMaps" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarMaps">
-                                <i class="ri-map-pin-line"></i> <span>Maps</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarMaps">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="google-maps.html" class="nav-link">
-                                            Google
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="jsvectormap.html" class="nav-link">
-                                            Jsvectormap
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="leaflet.html" class="nav-link">
-                                            Leaflet
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- Sidebar -->
-            </div>
-        </div>
-        <!-- Left Sidebar End -->
-        <!-- Vertical Overlay-->
-        <div class="vertical-overlay"></div>
-
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="main-content">
-
-            <div class="page-content">
+@section('content')
+<div class="page-content">
                 <div class="container-fluid">
 
                     <!-- start page title -->
@@ -501,55 +48,45 @@
                                             </p>
                                             <div class="col-sm-6">
                                                 <div class="verti-sitemap">
-                                                    <div>
-                                                        <div class="first-list">
-                                                            <div class="list-wrap">
-                                                                <a href="javascript: void(0);"
-                                                                    class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
-                                                                        class="me-1" alt="">default</a>
-                                                            </div>
-                                                            <ul class="second-list list-unstyled">
-                                                                <li>
-                                                                    <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
-                                                                            class="me-1" alt="">lang</a>
-                                                                    <ul class="second-list list-unstyled">
-                                                                        <li>
-                                                                        <li>
-                                                                            <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
-                                                                                    class="me-1" alt="">en</a>
-                                                                        </li>
-                                                                        <ul class="second-list list-unstyled">
-                                                                            <li>
-                                                                                <a href="javascript: void(0);"><img
-                                                                                        src="assets/images/extra/file.png"
-                                                                                        class="me-1"
-                                                                                        alt="">translation.php</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                </li>
-                                                            </ul>
-                                                            <ul class="second-list list-unstyled">
-                                                                <li>
-                                                                <li>
-                                                                    <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
-                                                                            class="me-1" alt="">gr</a>
-                                                                </li>
+                                                    <div class="first-list">
+                                                        <div class="list-wrap">
+                                                            <a href="javascript: void(0);" class="fw-medium text-primary">
+                                                                <img src="/assets/images/extra/folder.png" class="me-1" alt="">default
+                                                            </a>
+                                                        </div>
+                                                        <ul class="second-list list-unstyled">
+                                                            <li>
+                                                                <a href="javascript: void(0);">
+                                                                    <img src="/assets/images/extra/folder.png" class="me-1" alt="">lang
+                                                                </a>
                                                                 <ul class="second-list list-unstyled">
                                                                     <li>
-                                                                        <a href="javascript: void(0);"><img
-                                                                                src="assets/images/extra/file.png"
-                                                                                class="me-1" alt="">translation.php</a>
+                                                                        <a href="javascript: void(0);">
+                                                                            <img src="/assets/images/extra/folder.png" class="me-1" alt="">en
+                                                                        </a>
+                                                                        <ul class="second-list list-unstyled">
+                                                                            <li>
+                                                                                <a href="javascript: void(0);">
+                                                                                    <img src="/assets/images/extra/file.png" class="me-1" alt="">translation.php
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript: void(0);">
+                                                                            <img src="/assets/images/extra/folder.png" class="me-1" alt="">gr
+                                                                        </a>
+                                                                        <ul class="second-list list-unstyled">
+                                                                            <li>
+                                                                                <a href="javascript: void(0);">
+                                                                                    <img src="/assets/images/extra/file.png" class="me-1" alt="">translation.php
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
                                                                     </li>
                                                                 </ul>
-                                                                </li>
-                                                            </ul>
                                                             </li>
-                                                            </ul>
-                                                        </div>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -571,10 +108,10 @@ return [
                                                 string from the <code>lang/en/translation.php</code> language file:</p>
                                             <pre class="language-markup my-3"
                                                 tabindex="0"><code  class="language-markup">echo __('translation.welcome');</code></pre>
-                                            <p>If you are using the Blade templating engine, you may use the {{ }}
+                                            <p>If you are using the Blade templating engine, you may use the &#123;&#123; &#125;&#125;
                                                 syntax to echo the translation string or use the @lang directive:</p>
-                                            <pre class="language-markup my-3" tabindex="0"><code class="language-markup">{{ __('translation.welcome') }}
-@lang('translation.welcome')</code></pre>
+                                            <pre class="language-markup my-3" tabindex="0"><code class="language-markup">&#123;&#123; __('translation.welcome') &#125;&#125;
+&#64;lang('translation.welcome')</code></pre>
                                         </div>
                                         <!--end col-->
                                     </div>
@@ -639,9 +176,9 @@ class Localization
     /**
         * Handle an incoming request.
         *
-        * @param  \Illuminate\Http\Request  $request
-        * @param  \Closure  $next
-        * @return mixed
+        * &#64;param  \Illuminate\Http\Request  $request
+        * &#64;param  \Closure  $next
+        * &#64;return mixed
         */
     public function handle(Request $request, Closure $next)
     {
@@ -673,32 +210,32 @@ class Localization
                                             <pre class="language-markup my-3" tabindex="0"><code class="language-markup">&lt;div class="dropdown ms-1 topbar-head-dropdown header-item">
     &lt;button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        @switch(Session::get('lang'))
-        @case('ru')
-            &lt;img src="{{ URL::asset('/build/images/flags/russia.svg') }}" class="rounded" alt="Header Language"
+        &#64;switch(Session::get('lang'))
+        &#64;case('ru')
+            &lt;img src="&#123;&#123; URL::asset('/build/images/flags/russia.svg') &#125;&#125;" class="rounded" alt="Header Language"
                 height="20">
-        @break
-        @case('it')
-            &lt;img src="{{ URL::asset('/build/images/flags/italy.svg') }}" class="rounded" alt="Header Language"
+        &#64;break
+        &#64;case('it')
+            &lt;img src="&#123;&#123; URL::asset('/build/images/flags/italy.svg') &#125;&#125;" class="rounded" alt="Header Language"
                 height="20">
-        @break
-        @default
-            &lt;img src="{{ URL::asset('/build/images/flags/us.svg') }}" class="rounded" alt="Header Language" height="20">
-    @endswitch
+        &#64;break
+        &#64;default
+            &lt;img src="&#123;&#123; URL::asset('/build/images/flags/us.svg') &#125;&#125;" class="rounded" alt="Header Language" height="20">
+    &#64;endswitch
     &lt;/button>
     &lt;div class="dropdown-menu dropdown-menu-end">
 
         &lt;!-- item-->
-        &lt;a href="{{ url('index/en') }}" class="dropdown-item notify-item language py-2" data-lang="en"
+        &lt;a href="&#123;&#123; url('index/en') &#125;&#125;" class="dropdown-item notify-item language py-2" data-lang="en"
             title="English">
-            &lt;img src="{{ URL::asset('build/images/flags/us.svg') }}" alt="user-image" class="me-2 rounded" height="20">
+            &lt;img src="&#123;&#123; URL::asset('build/images/flags/us.svg') &#125;&#125;" alt="user-image" class="me-2 rounded" height="20">
             &lt;span class="align-middle">English&lt;/span>
         &lt;/a>
 
         &lt;!-- item-->
-        &lt;a href="{{ url('index/sp') }}" class="dropdown-item notify-item language" data-lang="sp"
+        &lt;a href="&#123;&#123; url('index/sp') &#125;&#125;" class="dropdown-item notify-item language" data-lang="sp"
             title="Spanish">
-            &lt;img src="{{ URL::asset('build/images/flags/spain.svg') }}" alt="user-image" class="me-2 rounded" height="20">
+            &lt;img src="&#123;&#123; URL::asset('build/images/flags/spain.svg') &#125;&#125;" alt="user-image" class="me-2 rounded" height="20">
             &lt;span class="align-middle">Española&lt;/span>
         &lt;/a>
     &lt;/div>
@@ -707,9 +244,9 @@ class Localization
                                             <h6 class="fw-semibold fs-16 text-decoration-underline mb-3">
                                                 welcome.blade.php</h6>
                                             <pre class="language-markup my-3" tabindex="0"><code class="language-markup">&lt;!DOCTYPE html>
-&lt;html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+&lt;html lang="&#123;&#123; str_replace('_', '-', app()->getLocale()) &#125;&#125;">
     &lt;head>  
-        &lt;title> @lang('translation.welcome')&lt;/title>
+        &lt;title> &#64;lang('translation.welcome')&lt;/title>
     &lt;/head>
 &lt;/html>
     </code></pre>
@@ -718,21 +255,21 @@ class Localization
                                             <p>sidebar.blade.php</p>
                                             <pre class="language-markup my-3" tabindex="0"><code class="language-markup">&lt;li class="nav-item">
 &lt;a href="#sidebarCRM" class="nav-link" data-bs-toggle="collapse" role="button"
-    aria-expanded="false" aria-controls="sidebarCRM" >@lang('translation.crm')
+    aria-expanded="false" aria-controls="sidebarCRM" >&#64;lang('translation.crm')
 &lt;/a>
 &lt;div class="collapse menu-dropdown" id="sidebarCRM">
     &lt;ul class="nav nav-sm flex-column">
         &lt;li class="nav-item">
-            &lt;a href="apps-crm-contacts" class="nav-link" >@lang('translation.contacts')&lt;/a>
+            &lt;a href="apps-crm-contacts" class="nav-link" >&#64;lang('translation.contacts')&lt;/a>
         &lt;/li>
         &lt;li class="nav-item">
-            &lt;a href="apps-crm-companies" class="nav-link" >@lang('translation.companies')&lt;/a>
+            &lt;a href="apps-crm-companies" class="nav-link" >&#64;lang('translation.companies')&lt;/a>
         &lt;/li>
         &lt;li class="nav-item">
-            &lt;a href="apps-crm-deals" class="nav-link" >@lang('translation.deals')&lt;/a>
+            &lt;a href="apps-crm-deals" class="nav-link" >&#64;lang('translation.deals')&lt;/a>
         &lt;/li>
         &lt;li class="nav-item">
-            &lt;a href="apps-crm-leads" class="nav-link" >@lang('translation.leads')&lt;/a>
+            &lt;a href="apps-crm-leads" class="nav-link" >&#64;lang('translation.leads')&lt;/a>
         &lt;/li>
     &lt;/ul>
 &lt;/div>
@@ -749,8 +286,6 @@ class Localization
                         <!--end card-->
                     </div>
                     <!--end col-->
-                </div>
-                <!--end row-->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
@@ -772,15 +307,15 @@ class Localization
                                                 "case" condition as below code and make sure to add the french.jpg file
                                                 in the
                                                 <code>public/build/images/flags</code> folder.
-                                                <pre class="language-markup my-3">@case('ru'){
-    document.getElementById("header-lang-img").src = "/build/images/flags/french.jpg";
-    &lt;img src="{{ URL::asset('/build/images/flags/french.svg')"&gt;
-    
+                                                <pre class="language-markup my-3">&#64;case('fr'){
+    document.getElementById("header-lang-img").src = "/build/images/flags/french.svg";
+    &lt;img src="&#123;&#123; URL::asset('/build/images/flags/french.svg') &#125;&#125;"&gt;
+&#64;break
 }</pre>
                                             </li>
                                             <li>
-                                                You can simply use @lang attributes in the HTML tag to convert the
-                                                language text. Example: &lt;a href="#">@lang('translation.title')&lt;/a>
+                                                You can simply use &#64;lang attributes in the HTML tag to convert the
+                                                language text. Example: &lt;a href="#"&gt;&#64;lang('translation.title')&lt;/a&gt;
                                             </li>
                                             <li>
                                                 <p>Add the below dropdown in the
@@ -788,8 +323,8 @@ class Localization
                                                     language dropdown.
                                                 </p>
                                                 <pre class="language-markup mt-3 mb-0">
-&lt;a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp" title="Spanish">
-    &lt;img src="{{ URL::asset('/build/images/flags/french.jpg') }}" alt="user-image" class="me-2 rounded" height="18">
+&lt;a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr" title="French">
+    &lt;img src="&#123;&#123; URL::asset('/build/images/flags/french.svg') &#125;&#125;" alt="user-image" class="me-2 rounded" height="18">
     &lt;span class="align-middle">French&lt;/span>
 &lt;/a></pre>
                                             </li>
@@ -811,56 +346,4 @@ class Localization
             <!-- container-fluid -->
         </div>
         <!-- End Page-content -->
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <script>document.write(new Date().getFullYear())</script> © Velzon.
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="text-sm-end d-none d-sm-block">
-                            Design & Develop by Themesbrand
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- end main content-->
-
-    </div>
-    <!-- END layout-wrapper -->
-
-
-
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/libs/prismjs/prism.js"></script>
-    <script src="assets/js/sidebar-focus.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
-</body>
-
-
-<!-- Mirrored from themesbrand.com/velzon/docs/laravel/multi-language.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Feb 2026 17:21:16 GMT -->
-
-</html>
-
-</html>
-
-</html>
-
-
-
-
-
-
-
-
-
+@endsection

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+﻿@extends('layouts.master')
 @section('title') @lang('translation.material-design') @endsection
 @section('content')
     @component('components.breadcrumb')
@@ -115,5 +115,7 @@
 @endsection
 @section('script')
     <script src="{{ URL::asset('build/js/pages/materialdesign.list.js') }}"></script>
+    <script src="{{ URL::asset('build/js/pages/icons-tools.js') }}"></script>
     <script src="{{ URL::asset('build/js/app.js') }}"></script>
 @endsection
+

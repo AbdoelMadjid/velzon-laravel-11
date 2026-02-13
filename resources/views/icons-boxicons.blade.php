@@ -1,4 +1,4 @@
-@extends('layouts.master')
+﻿@extends('layouts.master')
 @section('title') @lang('translation.boxicons') @endsection
 @section('content')
     @component('components.breadcrumb')
@@ -6,7 +6,7 @@
         @slot('title') Boxicons @endslot
     @endcomponent
 
-    <div class="row">
+    <div class="row" id="boxicons-root">
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
@@ -4774,5 +4774,7 @@
     <!-- end row -->
 @endsection
 @section('script')
+    <script src="{{ URL::asset('build/js/pages/icons-tools.js') }}"></script>
     <script src="{{ URL::asset('build/js/app.js') }}"></script>
 @endsection
+

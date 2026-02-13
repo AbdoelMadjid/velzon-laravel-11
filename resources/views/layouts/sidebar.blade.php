@@ -623,9 +623,13 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ url('docs/laravel/index') }}" target="_blank" rel="noopener noreferrer" class="nav-link menu-link">
+                        <i class="ri-book-open-line"></i> <span>Docs Laravel</span>
+                    </a>
+                </li>
 
                 <li class="menu-title"><i class="ri-more-fill"></i> <span>@lang('translation.components')</span></li>
-
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarUI" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUI">
                         <i class="ri-pencil-ruler-2-line"></i> <span>@lang('translation.base-ui')</span>

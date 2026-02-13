@@ -1,463 +1,9 @@
-<!doctype html>
-<html lang="en" data-layout="vertical" data-layout-style="" data-layout-position="" data-topbar="light"
-    data-sidebar="dark" data-sidebar-size="lg" data-layout-width="">
+@extends('docs.laravel.layout')
 
+@section('title', 'Folder Structure | Velzon Laravel - Admin & Dashboard Template Documentation')
 
-<!-- Mirrored from themesbrand.com/velzon/docs/laravel/folder-structure.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Feb 2026 17:21:04 GMT -->
-
-<head>
-
-    <meta charset="utf-8" />
-    <title>Folder Structure | Velzon Laravel - Admin & Dashboard Template Documentation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Velzon Laravel 9 Premium Multipurpose Admin & Dashboard Template Documentation" name="description" />
-    <meta content="Themesbrand" name="author" />
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="https://themesbrand.com/velzon/docs/assets/images/favicon.ico">
-
-    <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-    <!-- Remix Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" type="text/css" />
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icon-fixes.css" rel="stylesheet" type="text/css" />
-
-</head>
-
-<body>
-
-    <!-- Begin page -->
-    <div id="layout-wrapper">
-
-        <header id="page-topbar">
-            <div class="layout-width">
-                <div class="navbar-header">
-                    <div class="d-flex">
-                        <!-- LOGO -->
-                        <div class="navbar-brand-box horizontal-logo">
-                            <a href="index.html" class="logo logo-dark">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="17">
-                                </span>
-                            </a>
-
-                            <a href="index.html" class="logo logo-light">
-                                <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="" height="22">
-                                </span>
-                                <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="17">
-                                </span>
-                            </a>
-                        </div>
-
-                        <button type="button"
-                            class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger"
-                            id="topnav-hamburger-icon">
-                            <span class="hamburger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </button>
-
-                        <div class="header-item ms-2">
-                            <div class="avatar-sm me-1 me-md-2 flex-shrink-0">
-                                <div class="avatar-title bg-white rounded-circle border">
-                                    <img src="assets/images/brand-logos/laravel.png" alt="" height="23">
-                                </div>
-                            </div>
-                            <span class="h5 mb-0">Laravel Docs</span>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center">
-
-                        <div class="header-item me-1 me-md-3">
-                            <a href="https://1.envato.market/velzon-support" target="_blank" class="btn btn-success"><i
-                                    class="ri-lifebuoy-line me-1 align-middle"></i> Support</a>
-                        </div>
-
-                        <div class="header-item">
-                            <a href="https://1.envato.market/velzon-admin" target="_blank" class="btn btn-primary"><i
-                                    class="ri-shopping-basket-2-line me-1 align-middle"></i> Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ========== App Menu ========== -->
-        <div class="app-menu navbar-menu">
-            <!-- LOGO -->
-            <div class="navbar-brand-box">
-                <!-- Dark Logo-->
-                <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="" height="17">
-                    </span>
-                </a>
-                <!-- Light Logo-->
-                <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="assets/images/logo-light.png" alt="" height="17"> <span
-                            class="badge badge-soft-danger fs-14 ms-1">LARAVEL</span>
-                    </span>
-                </a>
-                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
-                    id="vertical-hover">
-                    <i class="ri-record-circle-line"></i>
-                </button>
-            </div>
-
-            <div id="scrollbar">
-                <div class="container-fluid">
-
-                    <ul class="navbar-nav" id="navbar-nav">
-                        <li class="menu-title"><span>Menu</span></li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="index.html">
-                                <i class="ri-honour-line"></i> <span>Introduction</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="folder-structure.html">
-                                <i class="ri-folder-2-line"></i> <span>Folder Structure</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="getting-started.html">
-                                <i class="ri-settings-6-line"></i> <span>Getting Started</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#customization" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="customization">
-                                <i class="ri-equalizer-line"></i> <span>Customization</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="customization">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="css.html" class="nav-link">CSS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="scss.html" class="nav-link">SASS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="javascript.html" class="nav-link">Javascript</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- end Dashboard Menu -->
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="layout-setup.html">
-                                <i class="ri-code-line"></i> <span>Layout Setup</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-structure.html">
-                                <i class=" ri-contrast-2-fill"></i> <span>Create New Page</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-passport.html">
-                                <i class="ri-plug-line"></i> <span>Laravel Passport</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="laravel-acl.html">
-                                <i class="ri-code-box-line"></i> <span>Laravel ACL</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="starter-kit.html">
-                                <i class="ri-rocket-line"></i> <span>Starter Kit vs Full Admin</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="theme-setup.html">
-                                <i class="ri-paint-line"></i> <span>Theme Setup</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarLayouts">
-                                <i class="ri-layout-3-line"></i> <span>Layouts</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarLayouts">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="vertical.html" class="nav-link">Vertical</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="horizontal.html" class="nav-link">Horizontal</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="detached.html" class="nav-link">Detached</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="two-column.html" class="nav-link">Two Column</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="hovered.html" class="nav-link">Hovered</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="semibox.html" class="nav-link">Semibox</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="multi-language.html">
-                                <i class="ri-global-line"></i> <span>Multi Language</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="dark-mode.html">
-                                <i class="ri-contrast-2-line"></i> <span>Dark Mode</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="rtl.html">
-                                <i class="ri-layout-right-2-line"></i> <span>RTL Version</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="sources.html">
-                                <i class="ri-pantone-line"></i> <span>Sources & Credits</span>
-                            </a>
-                        </li>
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="upgrade.html">
-                            <i class="ri-server-line"></i> <span>Upgrade</span>
-                        </a>
-                    </li> -->
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="changelog.html">
-                            <i class="ri-draft-line"></i> <span>Change Log</span>
-                        </a>
-                    </li> -->
-
-                        <!-- <li class="nav-item">
-                        <a class="nav-link menu-link" href="github.html">
-                            <i class="ri-github-line"></i> <span>Github Access</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link menu-link" href="">
-                            <i class="ri-discuss-line"></i> <span>Suggestions</span>
-                        </a>
-                    </li>-->
-
-                        <li class="menu-title"><i class="ri-more-fill"></i> <span>Components</span></li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="bootstrap-ui.html">
-                                <i class="ri-pencil-ruler-2-line"></i> <span>Bootstrap UI</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="icons.html">
-                                <i class="ri-compasses-2-line"></i> <span>Icons</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarAdvanceUI" data-bs-toggle="collapse"
-                                role="button" aria-expanded="false" aria-controls="sidebarAdvanceUI">
-                                <i class="ri-stack-line"></i> <span>Advance UI</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarAdvanceUI">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="sweetalert2.html" class="nav-link">Sweetalert2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="sortablejs.html" class="nav-link">Sortablejs</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="simplebar.html" class="nav-link">Simplebar</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="animation.html" class="nav-link">Aos Animation</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="shepherdjs-tour.html" class="nav-link">Shepherd Js - Tour</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="swiper-slider.html" class="nav-link">Swiper Slider</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="ratings.html" class="nav-link">Raterjs - Ratings</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="prismjs-highlight.html" class="nav-link">Prismjs - Highlight</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="glightbox.html" class="nav-link">Glightbox</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarForms" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarForms">
-                                <i class="ri-file-list-3-line"></i> <span>Forms</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarForms">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="choices.html" class="nav-link">Choices</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="flatpickr.html" class="nav-link"> Flatpickr </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="colorpicker.html" class="nav-link">Pickr - Colorpicker</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="input-mask.html" class="nav-link"> Cleavejs - Input Mask</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="multi-js.html" class="nav-link">Multi Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="autocomplete.html" class="nav-link">Autocomplete</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="input-spin.html" class="nav-link"> Input Spin </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="nouislider.html" class="nav-link">Nouislider - Range</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="wizard.html" class="nav-link">Wizard</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="ckeditor.html" class="nav-link">Ckeditor</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="quilljs.html" class="nav-link">Quilljs Editor</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="dropzone.html" class="nav-link">Dropzone - File Uploads</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="filepond.html" class="nav-link">Filepond - File Uploads</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="select2.html" class="nav-link">Select 2</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarTables" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarTables">
-                                <i class="ri-layout-grid-line"></i> <span>Tables</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarTables">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="gridjs.html" class="nav-link">Grid Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="listjs.html" class="nav-link">List Js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="datatables.html" class="nav-link">Data Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarCharts">
-                                <i class="ri-pie-chart-line"></i> <span>Charts</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarCharts">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="apexcharts.html" class="nav-link"> Apexcharts </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="chartjs.html" class="nav-link"> Chartjs </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="echarts.html" class="nav-link"> Echarts </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarMaps" data-bs-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="sidebarMaps">
-                                <i class="ri-map-pin-line"></i> <span>Maps</span>
-                            </a>
-                            <div class="collapse menu-dropdown" id="sidebarMaps">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="google-maps.html" class="nav-link">
-                                            Google
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="jsvectormap.html" class="nav-link">
-                                            Jsvectormap
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="leaflet.html" class="nav-link">
-                                            Leaflet
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- Sidebar -->
-            </div>
-        </div>
-        <!-- Left Sidebar End -->
-        <!-- Vertical Overlay-->
-        <div class="vertical-overlay"></div>
-
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class="main-content">
-
-            <div class="page-content">
+@section('content')
+<div class="page-content">
                 <div class="container-fluid">
 
                     <!-- start page title -->
@@ -498,7 +44,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Controller</p>
                                                     </td>
                                                     <td><code>app/Http/</code></td>
@@ -506,7 +52,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Middleware</p>
                                                     </td>
                                                     <td><code>app/</code></td>
@@ -514,7 +60,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Models</p>
                                                     </td>
                                                     <td><code>app/</code></td>
@@ -522,7 +68,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Migration</p>
                                                     </td>
                                                     <td><code>database/</code></td>
@@ -530,7 +76,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Seeders</p>
                                                     </td>
                                                     <td><code>database/</code></td>
@@ -539,7 +85,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Routes</p>
                                                     </td>
                                                     <td><code>routes/</code></td>
@@ -548,7 +94,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/folder.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/folder.png"
                                                                 class="folder-icon me-1" alt="">Resources</p>
                                                     </td>
                                                     <td><code>resources/</code></td>
@@ -556,7 +102,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">vite.config.js</p>
                                                     </td>
                                                     <td><code>/</code></td>
@@ -580,7 +126,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">customizer.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -588,7 +134,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">footer.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -597,7 +143,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">head-css.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -605,7 +151,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1"
                                                                 alt="">layouts-detached.blade.php</p>
                                                     </td>
@@ -614,7 +160,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1"
                                                                 alt="">layouts-horizontal.blade.php</p>
                                                     </td>
@@ -623,7 +169,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1"
                                                                 alt="">layouts-two-column.blade.php</p>
                                                     </td>
@@ -632,7 +178,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1"
                                                                 alt="">layouts-vertical-hovered.blade.php</p>
                                                     </td>
@@ -641,7 +187,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">master.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -650,7 +196,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1"
                                                                 alt="">master-without-nav.blade.php</p>
                                                     </td>
@@ -659,7 +205,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">sidebar.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -667,7 +213,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">topbar.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/layouts/</code></td>
@@ -676,7 +222,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">vendor-scripts.blade.php
                                                         </p>
                                                     </td>
@@ -700,7 +246,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">breadcrumb.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/components</code></td>
@@ -723,7 +269,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">login.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth</code></td>
@@ -732,7 +278,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">register.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth</code></td>
@@ -740,7 +286,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">verify.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth</code></td>
@@ -748,7 +294,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">confirm.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth/password</code></td>
@@ -756,7 +302,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">email.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth/password</code></td>
@@ -764,7 +310,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <p class="mb-0"><img src="assets/images/extra/file.png"
+                                                        <p class="mb-0"><img src="/assets/images/extra/file.png"
                                                                 class="folder-icon me-1" alt="">reset.blade.php</p>
                                                     </td>
                                                     <td><code>resources/views/auth/password</code></td>
@@ -805,7 +351,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt=""> corporate</a>
                                                             </div>
                                                         </div>
@@ -813,7 +359,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">creative</a>
                                                             </div>
                                                         </div>
@@ -821,153 +367,153 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">default</a>
                                                             </div>
                                                             <ul class="second-list list-unstyled">
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">app</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li> <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Console</a></li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Exceptions</a></li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Http</a>
                                                                             <ul class="second-list list-unstyled">
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">Controller</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">Middleware</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/file.png"
+                                                                                            src="/assets/images/extra/file.png"
                                                                                             class="me-1"
                                                                                             alt="">Kernel.php</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Models</a></li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Providers</a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1"
                                                                             alt="">bootstrap</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">cache</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">app.php</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">config</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">database</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">factories</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">migrations</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">seeders</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">.gitignore</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">lang</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">public</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">build</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">images</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">.htaccess</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">favicon.ico</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">index.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1"
                                                                                     alt="">mix-manifest.json</a>
                                                                         </li>
@@ -975,79 +521,79 @@
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1"
                                                                             alt="">resources</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">fonts</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">images</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">js</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">json</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">lang</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">scss</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">views</a>
                                                                             <ul class="second-list list-unstyled">
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">auth</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">components</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">error</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">layouts</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">all
                                                                                         blade pages</a>
@@ -1059,116 +605,116 @@
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">routes</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">api.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">channel.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">console.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">web.php</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">storage</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">tests</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.editorconfig</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.env</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.gitattributes</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.gitignore</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.rtlcsssrc</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">artisan</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">composer.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">composer.lock</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">package.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1"
                                                                             alt="">package-copy-config.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">package-lock.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">phpunit.xml</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">README.md</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">server.php</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">vite.config.js</a>
                                                                 </li>
                                                             </ul>
@@ -1177,7 +723,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">galaxy</a>
                                                             </div>
                                                         </div>
@@ -1185,7 +731,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">interactive</a>
                                                             </div>
                                                         </div>
@@ -1193,7 +739,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">material</a>
                                                             </div>
                                                         </div>
@@ -1201,7 +747,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">minimal</a>
                                                             </div>
                                                         </div>
@@ -1209,7 +755,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">modern</a>
                                                             </div>
                                                         </div>
@@ -1217,7 +763,7 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">sass</a>
                                                             </div>
                                                         </div>
@@ -1237,153 +783,153 @@
                                                             <div class="list-wrap">
                                                                 <a href="javascript: void(0);"
                                                                     class="fw-medium text-primary"><img
-                                                                        src="assets/images/extra/folder.png"
+                                                                        src="/assets/images/extra/folder.png"
                                                                         class="folder-icon me-1" alt="">Master</a>
                                                             </div>
                                                             <ul class="second-list list-unstyled">
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">app</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li> <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Console</a></li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Exceptions</a></li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Http</a>
                                                                             <ul class="second-list list-unstyled">
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">Controller</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">Middleware</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/file.png"
+                                                                                            src="/assets/images/extra/file.png"
                                                                                             class="me-1"
                                                                                             alt="">Kernel.php</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Models</a></li>
                                                                         <li><a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">Providers</a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1"
                                                                             alt="">bootstrap</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">cache</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">app.php</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">config</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">database</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">factories</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">migrations</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">seeders</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">.gitignore</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">lang</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">public</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">build</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">images</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">.htaccess</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">favicon.ico</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">index.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1"
                                                                                     alt="">mix-manifest.json</a>
                                                                         </li>
@@ -1391,79 +937,79 @@
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1"
                                                                             alt="">resources</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">fonts</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">images</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">js</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">json</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">lang</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">scss</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">views</a>
                                                                             <ul class="second-list list-unstyled">
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">auth</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">components</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">error</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">layouts</a>
                                                                                 </li>
                                                                                 <li>
                                                                                     <a href="javascript: void(0);"><img
-                                                                                            src="assets/images/extra/folder.png"
+                                                                                            src="/assets/images/extra/folder.png"
                                                                                             class="folder-icon me-1"
                                                                                             alt="">all
                                                                                         blade pages</a>
@@ -1475,116 +1021,116 @@
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">routes</a>
                                                                     <ul class="second-list list-unstyled">
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/folder.png"
+                                                                                    src="/assets/images/extra/folder.png"
                                                                                     class="folder-icon me-1"
                                                                                     alt="">api.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">channel.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">console.php</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript: void(0);"><img
-                                                                                    src="assets/images/extra/file.png"
+                                                                                    src="/assets/images/extra/file.png"
                                                                                     class="me-1" alt="">web.php</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">storage</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/folder.png"
+                                                                            src="/assets/images/extra/folder.png"
                                                                             class="folder-icon me-1" alt="">tests</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.editorconfig</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.env</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.gitattributes</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.gitignore</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">.rtlcsssrc</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">artisan</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">composer.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">composer.lock</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">package.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1"
                                                                             alt="">package-copy-config.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">package-lock.json</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">phpunit.xml</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">README.md</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">server.php</a>
                                                                 </li>
                                                                 <li>
                                                                     <a href="javascript: void(0);"><img
-                                                                            src="assets/images/extra/file.png"
+                                                                            src="/assets/images/extra/file.png"
                                                                             class="me-1" alt="">vite.config.js</a>
                                                                 </li>
                                                             </ul>
@@ -1608,52 +1154,4 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- end main content-->
-
-    </div>
-    <!-- END layout-wrapper -->
-
-
-
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/libs/prismjs/prism.js"></script>
-    <script src="assets/js/sidebar-focus.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
-</body>
-
-
-<!-- Mirrored from themesbrand.com/velzon/docs/laravel/folder-structure.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Feb 2026 17:21:04 GMT -->
-
-</html>
-
-
-
-
-
-
-
-
-
+@endsection
